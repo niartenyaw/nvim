@@ -12,7 +12,7 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-
+  -- LSP stuff
   use { 'nvim-treesitter/nvim-treesitter',  run = ':TSUpdate'}
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
@@ -26,5 +26,24 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-buffer'
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
+
+  -- prettier
+  -- use('jose-elias-alvarez/null-ls.nvim')
+  use('MunifTanjim/prettier.nvim')
+
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+  }
+
+  use 'airblade/vim-gitgutter'
+  use({
+    "stevearc/conform.nvim",
+    config = function()
+      require("conform").setup()
+    end,
+  })
 end)
 

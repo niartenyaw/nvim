@@ -14,5 +14,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- paste over highlight doesn't replace yanked with the replaced value
-vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("x", "<leader>p", '"_dP')
 
+-- close current buffer without closing current window
+vim.keymap.set("n", "<leader>q", ":bp<CR>:bd #<CR>")
