@@ -18,6 +18,7 @@ conform.setup({
 		yaml = { "prettierd", "prettier", stop_after_first = true },
 		markdown = { "prettierd", "prettier", stop_after_first = true },
 		sql = { "pgformatter" },
+		terraform = { "tflint" },
 	},
 	format_on_save = {
 		lsp_fallback = true,
